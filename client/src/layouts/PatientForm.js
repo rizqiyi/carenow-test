@@ -82,14 +82,15 @@ const PatientForm = () => {
         rules={[
           {
             required: true,
-            message: "Please input patient id",
-            type: "number",
+            type: "string",
+            // for alphanumeric or numeric validation
+            pattern: /^[a-zA-Z0-9]*$/,
           },
         ]}
         name="patient_id"
         label="Patient ID"
       >
-        <InputNumber style={{ width: "100%" }} placeholder="Input patient id" />
+        <Input style={{ width: "100%" }} placeholder="Input patient id" />
       </Form.Item>
       <Form.Item
         rules={[
