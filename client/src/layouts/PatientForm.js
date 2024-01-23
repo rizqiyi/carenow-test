@@ -24,6 +24,8 @@ const PatientForm = () => {
         },
         body: JSON.stringify({
           ...values,
+          treatments: values.treatments.map((val) => String(val)),
+          medications: values.medications.map((val) => String(val)),
           date_of_treatment: new Date(values.date_of_treatment).toISOString(),
         }),
       });
