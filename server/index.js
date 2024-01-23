@@ -28,7 +28,7 @@ app.get("/api/patients", async (req, res) => {
 app.post("/api/patient", async (req, res) => {
   try {
     const docRef = await db.collection("patients").add(req.body);
-    res.json({ id: docRef.id });
+    res.status(201).json({ id: docRef.id });
   } catch (error) {
     res.status(500).json({ error: `Internal Server Error: ${error}` });
   }
