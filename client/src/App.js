@@ -50,20 +50,6 @@ const App = () => {
     }
   };
 
-  const fetchPatients = async () => {
-    // await getDocs(collection(firestore, "patients")).then((querySnapshot) => {
-    //   const newData = querySnapshot.docs.map((doc) => ({
-    //     ...doc.data(),
-    //     id: doc.id,
-    //   }));
-    //   console.log(newData);
-    // });
-  };
-
-  useEffect(() => {
-    fetchPatients();
-  }, []);
-
   return (
     <div
       style={{
